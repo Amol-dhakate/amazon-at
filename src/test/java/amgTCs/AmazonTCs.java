@@ -60,9 +60,9 @@ public class AmazonTCs {
 
 		try {
 			List<WebElement> srchList = driver.findElements(By.xpath("//div[@class='pcTkSc'][@role='option']"));
-			System.out.println("Total serch result is :" + srchList.size());
+			System.out.println("Total search result is :" + srchList.size());
 			srchListSize = srchList.size();
-			System.out.println("Going to print serch result :");
+			System.out.println("Going to print search result :");
 			for (WebElement webElement2 : srchList) {
 				String sList = webElement2.getText();
 				System.out.println(sList);
@@ -98,23 +98,23 @@ public class AmazonTCs {
 		String texpectedSearch = "Dell Computers";
 		esearch.sendKeys(texpectedSearch, Keys.ENTER);
 
-		String ActualserchedText = driver.findElement(By.xpath("//span[@class='a-color-state a-text-bold']")).getText();
-		System.out.println("Searched Text is: " + ActualserchedText);
+		String Actual SearchedText = driver.findElement(By.xpath("//span[@class='a-color-state a-text-bold']")).getText();
+		System.out.println("Searched Text is: " + Actual SearchedText);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-		String NewActualserchedText = ActualserchedText.replace("\"", "");
-		System.out.println(NewActualserchedText);
+		String NewActual SearchedText = Actual SearchedText.replace("\"", "");
+		System.out.println(NewActual SearchedText);
 
-		if (texpectedSearch.contentEquals(NewActualserchedText)) {
+		if (texpectedSearch.contentEquals(NewActual SearchedText)) {
 			TestNGResults.put("3",
 					new Object[] { 2d,
 							"Click on amazon.in and Select catogary as 'Electronics' and search for 'Dell Computer'",
-							"Serched for Dell Computer", "Pass" });
+							" Searched for Dell Computer", "Pass" });
 		} else {
 			TestNGResults.put("3",
 					new Object[] { 2d,
 							"Click on amazon.in and Select catogary as 'Electronics' and search for 'Dell Computer'",
-							"Serched for Dell Computer", "Fail" });
+							" Searched for Dell Computer", "Fail" });
 		}
 
 	}
@@ -304,13 +304,13 @@ public class AmazonTCs {
 			WebElement email = driver.findElement(By.id("ap_email"));
 			email.click();
 			String emialorphone = "abc@gmail.com";
-			String pass = "YourPassword";
+			String yourPass = "YourPassword";
 			
 			email.sendKeys(emialorphone, Keys.ENTER);
 
 			WebElement pass = driver.findElement(By.id("ap_password"));
 			pass.click();
-			pass.sendKeys(pass, Keys.ENTER);
+			pass.sendKeys(yourPass, Keys.ENTER);
 
 			System.out.println("Login Sucess");
 
