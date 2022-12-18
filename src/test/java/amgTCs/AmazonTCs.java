@@ -31,14 +31,14 @@ public class AmazonTCs {
 	HSSFWorkbook workbook;
 	HSSFSheet sheet;
 	LinkedHashMap<String, Object[]> TestNGResults;
-	public static String driverPath = "C:\\Users\\Dheeraj Patel\\eclipse-workspace\\ArtAMG";
+	public static String driverPath = "C:\\Users\\Amol Dhakate\\eclipse-workspace\\ArtAMG";
 	String firstClickItem;
 
 	@BeforeClass
 	public void openBrowser() {
 		String newUrl = "https://www.google.co.in/";
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\Dheeraj Patel\\Downloads\\chromedriver_win32(1)\\chromedriver.exe");
+				"C:\\Users\\Amol Dhakate\\Downloads\\chromedriver_win32(1)\\chromedriver.exe");
 		ChromeOptions o = new ChromeOptions();
 		o.addArguments("--incognito");
 		DesiredCapabilities c = DesiredCapabilities.chrome();
@@ -303,11 +303,14 @@ public class AmazonTCs {
 			System.out.println("Clicked on Sign in");
 			WebElement email = driver.findElement(By.id("ap_email"));
 			email.click();
-			email.sendKeys("6260558900", Keys.ENTER);
+			String emialorphone = "abc@gmail.com";
+			String pass = "YourPassword";
+			
+			email.sendKeys(emialorphone, Keys.ENTER);
 
 			WebElement pass = driver.findElement(By.id("ap_password"));
 			pass.click();
-			pass.sendKeys("TestNG@123", Keys.ENTER);
+			pass.sendKeys(pass, Keys.ENTER);
 
 			System.out.println("Login Sucess");
 
