@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="amgTCs.AmazonTCs">
+        <methods>
+          <include name="printfiveStarRating"/>
+          <include name="suiteSetUp"/>
+          <include name="goToAmazon"/>
+          <include name="printSearchResult"/>
+          <include name="openBrowser"/>
+          <include name="priceRange"/>
+          <include name="suiteTearDown"/>
+          <include name="clickOnFirtsFive"/>
+        </methods>
+      </class> <!-- amgTCs.AmazonTCs -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
