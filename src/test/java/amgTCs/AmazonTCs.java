@@ -98,14 +98,14 @@ public class AmazonTCs {
 		String texpectedSearch = "Dell Computers";
 		esearch.sendKeys(texpectedSearch, Keys.ENTER);
 
-		String Actual SearchedText = driver.findElement(By.xpath("//span[@class='a-color-state a-text-bold']")).getText();
-		System.out.println("Searched Text is: " + Actual SearchedText);
+		String ActualSearchedText = driver.findElement(By.xpath("//span[@class='a-color-state a-text-bold']")).getText();
+		System.out.println("Searched Text is: " + ActualSearchedText);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-		String NewActual SearchedText = Actual SearchedText.replace("\"", "");
-		System.out.println(NewActual SearchedText);
+		String NewActualSearchedText = ActualSearchedText.replace("\"", "");
+		System.out.println(NewActualSearchedText);
 
-		if (texpectedSearch.contentEquals(NewActual SearchedText)) {
+		if (texpectedSearch.contentEquals(NewActualSearchedText)) {
 			TestNGResults.put("3",
 					new Object[] { 2d,
 							"Click on amazon.in and Select catogary as 'Electronics' and search for 'Dell Computer'",
